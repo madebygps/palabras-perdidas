@@ -1,0 +1,8 @@
+#solar:10.7b
+mixtral:latest
+gemma3:12b       
+#mistral:latest 
+llama3.1:latest
+#qwen3:14b           
+#deepseek-r1:14b     
+#gpt-oss:20b         

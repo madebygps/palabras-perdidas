@@ -1,0 +1,4 @@
+{
+  "prompt_a": "Dime la definición de la palabra '{word}'.",
+  "prompt_b": "Escribe dos frases, una con la palabra '{word}', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado."
+}
