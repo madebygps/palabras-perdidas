@@ -1,0 +1,12 @@
+{
+  "word": "corbata",
+  "actual_definition": "Prenda de adorno, especialmente masculina, consistente en una banda larga y estrecha que se coloca alrededor del cuello.",
+  "prompt_a": "Dime la definición de la palabra 'corbata'.",
+  "model_response_a": "La palabra \"corbata\" tiene varios significados, pero el más común es:\n\n*   **Prenda de vestir:** Una banda de tela que se ata alrededor del cuello, generalmente usada por hombres como parte de un atuendo formal o de negocios. Se ata alrededor de la camisa y se oculta debajo de la chaqueta (si se usa).\n\nTambién puede referirse a:\n\n*   **En algunos países de América Latina, como Colombia, Ecuador y Perú, \"corbata\" se usa para referirse a una bufanda.**\n\nLa palabra tiene origen en el francés \"cravate\", que a su vez deriva de \"croate\" (relacionado con la región de Croacia).",
+  "judge_result_a": "",
+  "judge_reasoning_a": "",
+  "prompt_b": "Escribe dos frases, una con la palabra 'corbata', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "Aquí tienes las dos frases:\n\n1.  \"Llevaba una **corbata** de seda roja que contrastaba con su traje gris.\"\n2.  \"Su aspecto impecable transmitía seriedad y profesionalismo.\"",
+  "judge_result_b": "",
+  "judge_reasoning_b": ""
+}

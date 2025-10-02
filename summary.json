@@ -1,0 +1,20 @@
+{
+  "mixtral:latest": {
+    "prompt_a_correct": 9,
+    "prompt_a_total": 10,
+    "prompt_b_correct": 0,
+    "prompt_b_total": 0
+  },
+  "gemma3:12b": {
+    "prompt_a_correct": 9,
+    "prompt_a_total": 10,
+    "prompt_b_correct": 0,
+    "prompt_b_total": 0
+  },
+  "llama3.1:latest": {
+    "prompt_a_correct": 8,
+    "prompt_a_total": 10,
+    "prompt_b_correct": 0,
+    "prompt_b_total": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "word": "giroscopio",
+  "actual_definition": "Disco que, en movimiento de rotación, conserva su eje invariable aunque cambie la dirección de su soporte.",
+  "prompt_a": "Dime la definición de la palabra 'giroscopio'.",
+  "model_response_a": "¡Hola! Te comento que un giroscopio es un dispositivo mecánico o electromecánico que mide o mantiene el ángulo o la rotación de un objeto. Está formado por un rotor que gira sobre su propio eje a gran velocidad y tiene la capacidad de mantener su orientación en el espacio, incluso cuando el cuerpo al que está unido cambia de dirección o se encuentra sujeto a fuerzas externas. Este principio es utilizado en una variedad de aplicaciones, como sistemas de navegación, estabilización de plataformas y dispositivos electrónicos, entre otros. ¡Espero que te sea útil!",
+  "judge_result_a": "correct",
+  "judge_reasoning_a": "Correct. The model response does capture the main meaning of the actual definition. It explains that a gyroscope is a device that can maintain its orientation in space even when the object it is attached to changes direction or is subjected to external forces. This is essentially the same as the actual definition, which states that a gyroscope is a disc that, when rotating, keeps its axis constant even if the direction of its support changes.",
+  "prompt_b": "Escribe dos frases, una con la palabra 'giroscopio', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "1. El giroscopio es un dispositivo que mide o mantiene la orientación y está formado por una masa giratoria alrededor de un eje, gracias a la conservación del momento angular.\n2. La tecnología de inercial utilizada en aviones y naves espaciales se basa en gyroscopes y acelerómetros para medir las fuerzas G y mantener la estabilidad durante el vuelo. (Aquí, aunque no usamos la palabra 'giroscopio' directamente, nos referimos a ella implícitamente como parte de un sistema más amplio).",
+  "judge_result_b": "correct",
+  "judge_reasoning_b": "Correct. The model's response fulfills the task correctly. The first sentence prominently features the target word 'giroscopio' and describes what it is and how it works. The second sentence, while not using the word 'giroscopio' directly, complements the first by explaining an application of gyroscopes in technology, maintaining a clear connection to the meaning expressed in the first sentence."
+}

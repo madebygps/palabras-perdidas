@@ -1,0 +1,12 @@
+{
+  "word": "giroscopio",
+  "actual_definition": "Disco que, en movimiento de rotación, conserva su eje invariable aunque cambie la dirección de su soporte.",
+  "prompt_a": "Dime la definición de la palabra 'giroscopio'.",
+  "model_response_a": "Un giroscopio es un dispositivo que mide las velocidades y posiciones rotacionales de un objeto en función del eje alrededor del cual está rotando. El término se utiliza principalmente para referirse a los dispositivos utilizados para medir la velocidad y orientación angular de objetos en movimiento.",
+  "judge_result_a": "",
+  "judge_reasoning_a": "",
+  "prompt_b": "Escribe dos frases, una con la palabra 'giroscopio', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "La nave espacial utiliza un giroscopio para determinar su orientación en el espacio.\n\nEl sistema de navegación incluye un giroscópico y un sistema inercial que proporcionan información precisa sobre la velocidad y dirección del vehículo.",
+  "judge_result_b": "",
+  "judge_reasoning_b": ""
+}

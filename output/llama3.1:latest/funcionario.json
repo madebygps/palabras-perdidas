@@ -1,0 +1,12 @@
+{
+  "word": "funcionario",
+  "actual_definition": "Persona que desempeña profesionalmente un empleo público.",
+  "prompt_a": "Dime la definición de la palabra 'funcionario'.",
+  "model_response_a": "Un funcionario es un empleado público o privado que ejerce una función determinada en una administración, empresa u organización. Suele estar sujeto a reglamentos y normas específicas, dependiendo del tipo de puesto que ocupe.",
+  "judge_result_a": "",
+  "judge_reasoning_a": "",
+  "prompt_b": "Escribe dos frases, una con la palabra 'funcionario', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "La frase con la palabra \"funcionario\" podría ser: \n\nEl gobierno debe elegir a personal de confianza para realizar sus funciones.\n\nY la segunda frase podría ser:\n\nLos ciudadanos deben participar en el proceso electoral para elegir al funcionario adecuado que represente sus intereses.",
+  "judge_result_b": "",
+  "judge_reasoning_b": ""
+}

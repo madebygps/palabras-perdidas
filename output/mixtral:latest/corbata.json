@@ -1,0 +1,12 @@
+{
+  "word": "corbata",
+  "actual_definition": "Prenda de adorno, especialmente masculina, consistente en una banda larga y estrecha que se coloca alrededor del cuello.",
+  "prompt_a": "Dime la definición de la palabra 'corbata'.",
+  "model_response_a": "¡Hola! La palabra \"corbata\" se refiere a un accesorio de vestir que usan las personas, especialmente los hombres, para rodear el cuello y atarlo en un nudo, generalmente sobre una camisa. Las corbatas suelen estar hechas de seda o algún material similar y vienen en diferentes colores, patrones y estilos. Se usan a menudo en situaciones formales o profesionales, como en el trabajo o en eventos especiales. Espero que eso ayude. ¡Que tengas un gran día!",
+  "judge_result_a": "",
+  "judge_reasoning_a": "",
+  "prompt_b": "Escribe dos frases, una con la palabra 'corbata', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "1. El novio se puso nervioso mientras ajustaba su elegante corbata de seda alverde antes de la ceremonia.\n2. Su padre, que siempre había sido hábil con las manualidades, le enseñó a hacer un nudo de corbata perfecto para ese día especial.",
+  "judge_result_b": "",
+  "judge_reasoning_b": ""
+}

@@ -1,0 +1,12 @@
+{
+  "word": "ovni",
+  "actual_definition": "Objeto volador no identificado, al que en ocasiones se considera como una nave espacial de procedencia extraterrestre.",
+  "prompt_a": "Dime la definición de la palabra 'ovni'.",
+  "model_response_a": "La palabra \"OVNI\" es un acrónimo que significa **Objeto Volador No Identificado**.\n\nEn inglés, se usa el término \"UFO\" (Unidentified Flying Object).\n\n**Definición más detallada:**\n\nUn OVNI es cualquier objeto aéreo cuya naturaleza no puede ser identificada inmediatamente por un observador, a pesar de pruebas exhaustivas. Es importante destacar que **\"no identificado\" no significa necesariamente que sea de origen extraterrestre**.  Puede ser un fenómeno natural, un objeto conocido visto en condiciones inusuales, un avión experimental, o incluso un engaño.\n\nLa comunidad científica generalmente evita el término \"OVNI\" debido a las connotaciones sensacionalistas que ha adquirido, prefiriendo términos más neutrales como \"Fenómeno Aéreo No Identificado\" (FANIs) para referirse a los incidentes que requieren investigación.",
+  "judge_result_a": "",
+  "judge_reasoning_a": "",
+  "prompt_b": "Escribe dos frases, una con la palabra 'ovni', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "Aquí tienes las dos frases:\n\n1.  \"El granjero juró haber visto un **ovni** iluminando los campos durante la noche.\"\n2.  \"La persistente luz inexplicable generó una ola de especulaciones sobre fenómenos desconocidos.\"",
+  "judge_result_b": "",
+  "judge_reasoning_b": ""
+}

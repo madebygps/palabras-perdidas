@@ -1,0 +1,12 @@
+{
+  "word": "dactiloscopia",
+  "actual_definition": "Estudio de las impresiones dactilares, utilizadas para la identificación de las personas.",
+  "prompt_a": "Dime la definición de la palabra 'dactiloscopia'.",
+  "model_response_a": "La dactiloscopia es una ciencia que estudia el sistema de impresiones y huellas dactilares, tanto fijas como móviles.",
+  "judge_result_a": "",
+  "judge_reasoning_a": "",
+  "prompt_b": "Escribe dos frases, una con la palabra 'dactiloscopia', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "1. La dactiloscopia es un método utilizado para identificar a personas mediante las características únicas de sus dedos, como el número y la forma de sus uñas.\n\n2. Los datos recolectados por medio de la dactiloscopia se almacenan después en bases de datos especializadas y son utilizados por las autoridades policiales para realizar investigaciones relacionadas con delitos.",
+  "judge_result_b": "",
+  "judge_reasoning_b": ""
+}

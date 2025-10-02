@@ -1,0 +1,12 @@
+{
+  "word": "funcionario",
+  "actual_definition": "Persona que desempeña profesionalmente un empleo público.",
+  "prompt_a": "Dime la definición de la palabra 'funcionario'.",
+  "model_response_a": "¡Hola! La palabra \"funcionario\" se refiere a una persona que trabaja en el sector público y desempeña funciones o tareas específicas en una institución gubernamental, organismo público o empresa estatal.\n\nLos funcionarios pueden desempeñar diferentes cargos y responsabilidades, desde puestos de menor rango hasta posiciones de alta dirección. Su trabajo está regulado por normas y procedimientos específicos, y su remuneración y prestaciones sociales suelen estar establecidas por ley.\n\nAlgunos ejemplos de funcionarios pueden ser: un policía, un maestro en una escuela pública, un empleado de la administración pública, un juez o un funcionario diplomático.",
+  "judge_result_a": "correct",
+  "judge_reasoning_a": "Correct. The model's response is substantially correct as it captures the main meaning of the original definition. It explains that a \"funcionario\" is a person who works in the public sector, holds a specific role in a government institution, and their work is regulated by specific regulations. It also provides examples of various job roles this term can refer to.",
+  "prompt_b": "Escribe dos frases, una con la palabra 'funcionario', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "1. El funcionario se encargó de revisar minuciosamente todos los documentos presentados para el proceso.\n2. La eficiencia en el manejo de la burocracia depende, en gran medida, del personal administrativo y su capacidad para resolver problemas de manera oportuna.",
+  "judge_result_b": "correct",
+  "judge_reasoning_b": "Correct. The first sentence uses the target word 'funcionario' appropriately. The second sentence, although it doesn't mention 'funcionario', complements the first sentence by discussing the efficiency of administrative staff, which a 'funcionario' is part of."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "funcionario",
+  "actual_definition": "Persona que desempeña profesionalmente un empleo público.",
+  "prompt_a": "Dime la definición de la palabra 'funcionario'.",
+  "model_response_a": "La palabra \"funcionario\" tiene varias definiciones relacionadas, pero en general se refiere a:\n\n**1. Persona que presta servicios a la administración pública, ya sea a nivel estatal, provincial o municipal.** Esto implica que trabaja para el gobierno y ejerce funciones relacionadas con la administración del Estado.\n\n**2. (En algunos contextos) Persona que trabaja al servicio de una empresa o institución pública, aunque no necesariamente con un contrato de funcionario público.** En este sentido, puede ser un empleado que trabaja para una empresa estatal pero no ha superado un proceso de oposición para ser funcionario público.\n\n**En resumen, un funcionario es alguien que trabaja para el gobierno o una entidad pública, ya sea como empleado contratado o como funcionario público que ha accedido a su puesto a través de un proceso de oposición.**\n\nEs importante distinguir entre \"funcionario\" y \"empleado público\".  Todos los funcionarios son empleados públicos, pero no todos los empleados públicos son funcionarios.  El término \"funcionario\" suele implicar una relación laboral más estable y con mayores garantías legales.",
+  "judge_result_a": "",
+  "judge_reasoning_a": "",
+  "prompt_b": "Escribe dos frases, una con la palabra 'funcionario', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "Aquí tienes las dos frases:\n\n1. **\"El funcionario público se dedica a servir a la comunidad, garantizando el cumplimiento de las leyes y regulaciones.\"**\n2. **\"La administración pública depende de profesionales comprometidos para ofrecer servicios esenciales a la ciudadanía.\"**\n\nLa segunda frase complementa la primera al hablar de la administración pública, la entidad en la que trabaja el funcionario.",
+  "judge_result_b": "",
+  "judge_reasoning_b": ""
+}

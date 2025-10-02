@@ -1,0 +1,12 @@
+{
+  "word": "corbata",
+  "actual_definition": "Prenda de adorno, especialmente masculina, consistente en una banda larga y estrecha que se coloca alrededor del cuello.",
+  "prompt_a": "Dime la definición de la palabra 'corbata'.",
+  "model_response_a": "La definición de corbata es un trozo de tela de lino, seda o otras telas que rodea el cuello y se ajusta con un nudo.",
+  "judge_result_a": "",
+  "judge_reasoning_a": "",
+  "prompt_b": "Escribe dos frases, una con la palabra 'corbata', y otra que no contenga esa palabra, pero que esté relacionada con la primera y complemente su significado.",
+  "model_response_b": "\"Usar una corbata es un gesto de formalidad.\"\n\n\"No usarla es un signo de informalidad.\"",
+  "judge_result_b": "",
+  "judge_reasoning_b": ""
+}
