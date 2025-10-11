@@ -55,25 +55,21 @@ def generate_completion(client, model, prompt):
     except Exception as e:
         return f"Error: {str(e)}"
 
-def create_output_structure(model_name):
-    """Create output directory structure for a model."""
-    output_dir = Path("output") / model_name
+def create_output_structure(prompt_type, model_name):
+    """Create output directory structure for a model and prompt type."""
+    output_dir = Path("output") / prompt_type / model_name
     output_dir.mkdir(parents=True, exist_ok=True)
     return output_dir
 
-def save_word_result(output_dir, word_data, prompt_a, response_a, prompt_b=None, response_b=None):
+def save_word_result(output_dir, word_data, prompt, response, prompt_type):
     """Save individual word result to JSON file."""
     result = {
         "word": word_data["word"],
         "actual_definition": word_data["answer"],
-        "prompt_a": prompt_a,
-        "model_response_a": response_a,
-        "judge_result_a": "",
-        "judge_reasoning_a": "",
-        "prompt_b": prompt_b or "",
-        "model_response_b": response_b or "",
-        "judge_result_b": "",
-        "judge_reasoning_b": ""
+        "prompt": prompt,
+        "model_response": response,
+        "judge_result": "",
+        "judge_reasoning": ""
     }
     
     file_path = output_dir / f"{word_data['word']}.json"
@@ -92,19 +88,21 @@ def process_models_with_ollama(vocabulary, models, prompt_a_template, prompt_b_t
         model_name = model['name']
         print(f"\nProcessing model: {model_name}")
         
-        output_dir = create_output_structure(model_name)
+        # Create separate output directories for prompt A and prompt B
+        output_dir_a = create_output_structure("prompt_a", model_name)
+        output_dir_b = create_output_structure("prompt_b", model_name)
         
         # Process each word with progress bar
         for word_data in tqdm(vocabulary, desc=f"Processing {model_name}"):
             # Process prompt A
             prompt_a = prompt_a_template.format(word=word_data["word"])
             response_a = generate_completion(ollama_client, model_name, prompt_a)
+            save_word_result(output_dir_a, word_data, prompt_a, response_a, "prompt_a")
             
             # Process prompt B
             prompt_b = prompt_b_template.format(word=word_data["word"])
             response_b = generate_completion(ollama_client, model_name, prompt_b)
-            
-            save_word_result(output_dir, word_data, prompt_a, response_a, prompt_b, response_b)
+            save_word_result(output_dir_b, word_data, prompt_b, response_b, "prompt_b")
 
 def judge_responses():
     """Use GPT-4 to judge all model responses."""
@@ -117,67 +115,77 @@ def judge_responses():
     
     print("\nJudging responses with GPT-4...")
     
-    for model_dir in output_path.iterdir():
-        if not model_dir.is_dir():
+    # Process prompt_a and prompt_b directories separately
+    for prompt_type in ["prompt_a", "prompt_b"]:
+        prompt_dir = output_path / prompt_type
+        if not prompt_dir.exists():
+            print(f"No {prompt_type} directory found.")
             continue
-            
-        print(f"Judging responses for model: {model_dir.name}")
         
-        word_files = list(model_dir.glob("*.json"))
-        for word_file in tqdm(word_files, desc=f"Judging {model_dir.name}"):
-            with open(word_file, 'r', encoding='utf-8') as f:
-                data = json.load(f)
+        print(f"\nJudging {prompt_type} responses...")
+        
+        for model_dir in prompt_dir.iterdir():
+            if not model_dir.is_dir():
+                continue
+                
+            print(f"Judging responses for model: {model_dir.name}")
             
-            # Judge prompt A response if not already judged
-            if not data.get("judge_result_a") and data.get("model_response_a"):
-                judge_prompt_a = f"""
-                Compare the following two definitions of the Spanish word "{data['word']}":
-
-                Actual definition: {data['actual_definition']}
-                Model response: {data['model_response_a']}
-
-                Is the model's response substantially correct? It doesn't need to be word-for-word identical, but should capture the main meaning and be reasonably accurate.
-
-                Respond with either "correct" or "incorrect", followed by a brief explanation of your reasoning.
-                """
+            word_files = list(model_dir.glob("*.json"))
+            for word_file in tqdm(word_files, desc=f"Judging {model_dir.name}"):
+                with open(word_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
                 
-                judge_response_a = generate_completion(openai_client, "gpt-4", judge_prompt_a)
+                # Skip if already judged
+                if data.get("judge_result"):
+                    continue
                 
-                # Parse judge response for prompt A
-                if judge_response_a.lower().startswith("correct"):
-                    data["judge_result_a"] = "correct"
+                # Get the actual definition - handle both 'actual_definition' and 'answer' keys
+                actual_def = data.get('actual_definition') or data.get('answer', 'N/A')
+                model_response = data.get('model_response', 'N/A')
+                
+                # Skip if no model response
+                if not model_response or model_response == 'N/A':
+                    continue
+                
+                if prompt_type == "prompt_a":
+                    # Judge prompt A response
+                    judge_prompt = f"""
+                    Compare the following two definitions of the Spanish word "{data['word']}":
+
+                    Actual definition: {actual_def}
+                    Model response: {model_response}
+
+                    Is the model's response substantially correct? It doesn't need to be word-for-word identical, but should capture the main meaning and be reasonably accurate.
+
+                    Respond with either "correct" or "incorrect", followed by a brief explanation of your reasoning.
+                    """
                 else:
-                    data["judge_result_a"] = "incorrect"
-                
-                data["judge_reasoning_a"] = judge_response_a
-            
-            # Judge prompt B response if not already judged
-            if not data.get("judge_result_b") and data.get("model_response_b"):
-                judge_prompt_b = f"""
-                Evaluate the following response to a Spanish word exercise for the word "{data['word']}":
+                    # Judge prompt B response
+                    judge_prompt = f"""
+                    Evaluate the following response to a Spanish word exercise for the word "{data['word']}":
 
-                Task: Write two sentences - one using the word '{data['word']}', and another related sentence that doesn't contain the word but complements its meaning.
-                
-                Model response: {data['model_response_b']}
+                    Task: Write two sentences - one using the word '{data['word']}', and another related sentence that doesn't contain the word but complements its meaning.
+                    
+                    Model response: {model_response}
 
-                Does the model's response fulfill the task correctly? It should contain two sentences: one with the target word and one related sentence without it.
+                    Does the model's response fulfill the task correctly? It should contain two sentences: one with the target word and one related sentence without it.
 
-                Respond with either "correct" or "incorrect", followed by a brief explanation of your reasoning.
-                """
+                    Respond with either "correct" or "incorrect", followed by a brief explanation of your reasoning.
+                    """
                 
-                judge_response_b = generate_completion(openai_client, "gpt-4", judge_prompt_b)
+                judge_response = generate_completion(openai_client, "gpt-4", judge_prompt)
                 
-                # Parse judge response for prompt B
-                if judge_response_b.lower().startswith("correct"):
-                    data["judge_result_b"] = "correct"
+                # Parse judge response
+                if judge_response.lower().startswith("correct"):
+                    data["judge_result"] = "correct"
                 else:
-                    data["judge_result_b"] = "incorrect"
+                    data["judge_result"] = "incorrect"
                 
-                data["judge_reasoning_b"] = judge_response_b
-            
-            # Save updated result
-            with open(word_file, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
+                data["judge_reasoning"] = judge_response
+                
+                # Save updated result
+                with open(word_file, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
 
 def create_summary():
     """Create summary.json with all results."""
@@ -188,31 +196,45 @@ def create_summary():
         print("No output directory found.")
         return summary
     
-    for model_dir in output_path.iterdir():
-        if not model_dir.is_dir():
-            continue
-        
-        model_name = model_dir.name
+    # Collect models from both prompt directories
+    all_models = set()
+    prompt_a_dir = output_path / "prompt_a"
+    prompt_b_dir = output_path / "prompt_b"
+    
+    if prompt_a_dir.exists():
+        all_models.update([d.name for d in prompt_a_dir.iterdir() if d.is_dir()])
+    if prompt_b_dir.exists():
+        all_models.update([d.name for d in prompt_b_dir.iterdir() if d.is_dir()])
+    
+    for model_name in all_models:
         correct_count_a = 0
         total_count_a = 0
         correct_count_b = 0
         total_count_b = 0
         
-        for word_file in model_dir.glob("*.json"):
-            with open(word_file, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            
-            # Count prompt A results
-            if data.get("model_response_a"):
-                total_count_a += 1
-                if data.get("judge_result_a") == "correct":
-                    correct_count_a += 1
-            
-            # Count prompt B results
-            if data.get("model_response_b"):
-                total_count_b += 1
-                if data.get("judge_result_b") == "correct":
-                    correct_count_b += 1
+        # Count prompt A results
+        model_dir_a = prompt_a_dir / model_name
+        if model_dir_a.exists():
+            for word_file in model_dir_a.glob("*.json"):
+                with open(word_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                
+                if data.get("model_response"):
+                    total_count_a += 1
+                    if data.get("judge_result") == "correct":
+                        correct_count_a += 1
+        
+        # Count prompt B results
+        model_dir_b = prompt_b_dir / model_name
+        if model_dir_b.exists():
+            for word_file in model_dir_b.glob("*.json"):
+                with open(word_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                
+                if data.get("model_response"):
+                    total_count_b += 1
+                    if data.get("judge_result") == "correct":
+                        correct_count_b += 1
         
         summary[model_name] = {
             "prompt_a_correct": correct_count_a,
