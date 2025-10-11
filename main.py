@@ -105,16 +105,16 @@ def process_models_with_ollama(vocabulary, models, prompt_a_template, prompt_b_t
             save_word_result(output_dir_b, word_data, prompt_b, response_b, "prompt_b")
 
 def judge_responses():
-    """Use GPT-4 to judge all model responses."""
+    """Use GPT-5 to judge all model responses."""
     openai_client = setup_openai_client()
     output_path = Path("output")
     
     if not output_path.exists():
         print("No output directory found. Run model processing first.")
         return
-    
-    print("\nJudging responses with GPT-4...")
-    
+
+    print("\nJudging responses with GPT-5...")
+
     # Process prompt_a and prompt_b directories separately
     for prompt_type in ["prompt_a", "prompt_b"]:
         prompt_dir = output_path / prompt_type
@@ -172,9 +172,9 @@ def judge_responses():
 
                     Respond with either "correct" or "incorrect", followed by a brief explanation of your reasoning.
                     """
-                
-                judge_response = generate_completion(openai_client, "gpt-4", judge_prompt)
-                
+
+                judge_response = generate_completion(openai_client, "gpt-5", judge_prompt)
+
                 # Parse judge response
                 if judge_response.lower().startswith("correct"):
                     data["judge_result"] = "correct"
@@ -288,7 +288,7 @@ def main():
     print("\n=== Processing models with Ollama ===")
     process_models_with_ollama(vocabulary, models, prompt_a, prompt_b)
     
-    # Step 2: Judge responses with GPT-4
+    # Step 2: Judge responses with GPT-5
     print("\n=== Judging responses ===")
     judge_responses()
     
