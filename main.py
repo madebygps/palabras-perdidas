@@ -139,13 +139,21 @@ def judge_responses():
                 if data.get("judge_result"):
                     continue
                 
+                # Get the actual definition - handle both 'actual_definition' and 'answer' keys
+                actual_def = data.get('actual_definition') or data.get('answer', 'N/A')
+                model_response = data.get('model_response', 'N/A')
+                
+                # Skip if no model response
+                if not model_response or model_response == 'N/A':
+                    continue
+                
                 if prompt_type == "prompt_a":
                     # Judge prompt A response
                     judge_prompt = f"""
                     Compare the following two definitions of the Spanish word "{data['word']}":
 
-                    Actual definition: {data['actual_definition']}
-                    Model response: {data['model_response']}
+                    Actual definition: {actual_def}
+                    Model response: {model_response}
 
                     Is the model's response substantially correct? It doesn't need to be word-for-word identical, but should capture the main meaning and be reasonably accurate.
 
@@ -158,7 +166,7 @@ def judge_responses():
 
                     Task: Write two sentences - one using the word '{data['word']}', and another related sentence that doesn't contain the word but complements its meaning.
                     
-                    Model response: {data['model_response']}
+                    Model response: {model_response}
 
                     Does the model's response fulfill the task correctly? It should contain two sentences: one with the target word and one related sentence without it.
 
