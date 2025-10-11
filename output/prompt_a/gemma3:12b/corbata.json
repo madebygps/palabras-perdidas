@@ -1,0 +1,7 @@
+{
+  "word": "corbata",
+  "correct_definition": "Prenda de adorno, especialmente masculina, consistente en una banda larga y estrecha que se coloca alrededor del cuello.",
+  "model_definition": "La palabra \"corbata\" tiene varios significados, pero los más comunes son:\n\n*   **Prenda de vestir:** Es una pieza de tela larga y estrecha que se ata alrededor del cuello, generalmente como parte de un atuendo formal.\n*   **En algunos países de Latinoamérica:** También puede referirse a un lazo o nudo decorativo, incluso si no se usa como una prenda de vestir.\n\nEn resumen, la definición principal es una **pieza de tela que se ata alrededor del cuello como accesorio de vestimenta**.",
+  "judgment": "incorrect",
+  "reasoning": "La definición principal coincide (prenda larga y estrecha que se ata al cuello como accesorio). Pero añade una acepción regional según la cual “corbata” sería cualquier lazo o nudo decorativo incluso fuera de la vestimenta, lo cual no es una acepción estándar ni correcta; el término se refiere a la prenda (y variantes como pajarita), no a cualquier lazo decorativo."
+}

@@ -1,0 +1,7 @@
+{
+  "word": "funcionario",
+  "correct_definition": "Persona que desempeña profesionalmente un empleo público.",
+  "model_definition": "La palabra \"funcionario\" tiene varias definiciones relacionadas, pero en general se refiere a:\n\n* **Persona que presta servicios en la administración pública.** Es decir, trabaja para el gobierno, ya sea a nivel nacional, regional o local. Esto incluye a personas que trabajan en ministerios, departamentos, ayuntamientos, etc.\n* **Empleado público.** Es un sinónimo común de funcionario.\n\n**En resumen, un funcionario es alguien que trabaja para el gobierno y recibe un salario pagado por el erario público.**\n\nEs importante destacar que los funcionarios pueden ser:\n\n* **De carrera:** Que ingresan a la administración pública a través de un proceso de oposición y tienen estabilidad laboral.\n* **De confianza:** Que son nombrados por sus conocimientos o experiencia.\n* **Temporal:** Que trabajan por un período de tiempo determinado.\n\nEspero que esta explicación sea clara.\n",
+  "judgment": "correct",
+  "reasoning": "The model defines 'funcionario' as a person working in public administration/a public employee paid by the state, which matches 'persona que desempeña profesionalmente un empleo público.' Additional details (types of funcionarios) do not contradict the core meaning."
+}

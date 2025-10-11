@@ -1,0 +1,7 @@
+{
+  "word": "pagar",
+  "correct_definition": "Dicho de una persona: Dar a otra, o satisfacer, lo que le debe.",
+  "model_definition": "La palabra \"pagar\" tiene varios significados relacionados, pero en general significa:\n\n**1. Entregar una suma de dinero que se debe:** Es el significado más común. Implica saldar una deuda, un precio o una obligación financiera.\n   * Ejemplos:\n      * \"Tengo que pagar la factura de la luz.\"\n      * \"Pagué el alquiler del mes pasado.\"\n      * \"Pagaré lo que debo.\"\n\n**2. Compensar o retribuir:**  Puede referirse a ofrecer algo a cambio de un favor o servicio.\n   * Ejemplos:\n      * \"Quiero pagarle con amabilidad su ayuda.\"\n      * \"Es importante pagar el bien que te hacen.\"\n\n**3. (En algunos contextos) Soportar consecuencias o sufrir:**  Menos común, implica sufrir las consecuencias de algo.\n   * Ejemplo: \"Tuvo que pagar un alto precio por su error.\"\n\nEn resumen, \"pagar\" se centra en la idea de **cancelar una deuda o corresponder a algo recibido.**\n",
+  "judgment": "correct",
+  "reasoning": "Define el núcleo de ‘pagar’ como entregar/saldar lo que se debe, que coincide con “dar a otra, o satisfacer, lo que le debe”. Las acepciones adicionales (retribuir/compensar; sufrir consecuencias) son usos figurados comunes y no contradicen el significado principal."
+}

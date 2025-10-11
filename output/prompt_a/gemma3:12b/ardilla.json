@@ -1,0 +1,7 @@
+{
+  "word": "ardilla",
+  "correct_definition": "Mamífero roedor, de unos 20 cm de largo, de color negro rojizo por el lomo, blanco por el vientre y con cola muy poblada.",
+  "model_definition": "Una **ardilla** es un pequeño mamífero roedor conocido por su cola tupida y su habilidad para trepar árboles. Aquí te doy una definición más completa:\n\n*   **Clasificación:** Pertenece a la familia Sciuridae, que incluye también a las marmotas, los pikas y los lémings.\n*   **Características:** Tienen cuerpos ágiles, garras afiladas para trepar y una cola larga que usan para mantener el equilibrio.\n*   **Hábitat:** Se encuentran en diversos hábitats, como bosques, parques y jardines, en casi todo el mundo.\n*   **Alimentación:** Son principalmente herbívoras, alimentándose de nueces, semillas, frutas y brotes.\n*   **Tipos:** Existen muchas especies diferentes de ardillas, incluyendo ardillas terrestres, ardillas voladoras y ardillas grises.\n\nEspero que esto te sea útil.\n",
+  "judgment": "incorrect",
+  "reasoning": "La definición del modelo es genérica y no recoge rasgos clave del enunciado correcto (tamaño ~20 cm y coloración: lomo negro rojizo y vientre blanco). Además, incluye una clasificación errónea (pikas y lémings no pertenecen a Sciuridae). Por tanto, no transmite el mismo significado específico."
+}

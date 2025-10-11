@@ -1,0 +1,7 @@
+{
+  "word": "agüista",
+  "correct_definition": "Persona que asiste a un establecimiento de aguas mineromedicinales con fines curativos.",
+  "model_definition": "La palabra \"agüista\" tiene dos significados principales, ambos relacionados con el agua, pero con connotaciones diferentes:\n\n*   **En algunos países de América Latina (principalmente en el Caribe y Sudamérica), se refiere a una persona que se dedica a vender agua fresca o helada en la calle.** Estos vendedores suelen llevar un recipiente con agua, a menudo con saborizantes o hielo, y la venden en vasos o recipientes pequeños.\n*   **En algunos contextos, puede usarse de forma despectiva para describir a una persona que es ingenua, crédula o fácilmente influenciable.** Este significado es menos común y proviene de la idea de que el \"agüista\" es alguien que se deja engañar fácilmente.\n\nEs importante tener en cuenta el contexto para entender el significado correcto de la palabra.",
+  "judgment": "incorrect",
+  "reasoning": "La acepción correcta se refiere a quien acude a establecimientos de aguas mineromedicinales con fines curativos (balnearios). El modelo la define como vendedor ambulante de agua o como persona ingenua, significados que no corresponden a “agüista” en español estándar."
+}

@@ -1,0 +1,7 @@
+{
+  "word": "giroscopio",
+  "correct_definition": "Disco que, en movimiento de rotación, conserva su eje invariable aunque cambie la dirección de su soporte.",
+  "model_definition": "Un **giroscopio** es un dispositivo mecánico que utiliza la propiedad de la conservación del momento angular para mantener una orientación fija o para detectar cambios en la orientación.\n\nAquí te desgloso la definición en partes:\n\n*   **Mecanismo:** Generalmente consiste en un disco o rueda que gira a alta velocidad sobre un eje.\n*   **Conservación del momento angular:**  Esta es la propiedad física clave.  Un objeto que gira tiende a mantener su orientación en el espacio a menos que se le aplique una fuerza externa.\n*   **Función:** Puede usarse para:\n    *   **Mantener una orientación fija:**  Como en los sistemas de navegación inercial.\n    *   **Detectar cambios en la orientación:** Como en los estabilizadores de cámaras o en los giroscopios de videojuegos.\n\n**En resumen:**  Es una herramienta que aprovecha la rotación para mantener o detectar la orientación, siendo esencial en navegación, estabilización y control.\n\nEspero que esta definición sea clara.",
+  "judgment": "correct",
+  "reasoning": "La definición del modelo capta la esencia: un disco/rueda en rotación que, por conservación del momento angular, mantiene su orientación (eje) incluso si cambia la orientación del soporte. Añade usos (navegación, estabilización) que no contradicen la definición correcta y menciona el principio físico subyacente."
+}
